@@ -1,0 +1,143 @@
+                                                                                                                                                                                                                                                                                                                                                                                             <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Başlıksız Belge</title>
+	<script type="text/javascript" language="javascript">
+	
+	function hesapla(){
+		var tdogru=document.ygshesapla.tdogru.value;
+		var tyanlis=document.ygshesapla.tyanlis.value;
+		var tnet=tdogru-(tyanlis/4);
+		document.ygssonuc.tnet.value=tnet;
+		
+		var mdogru=document.ygshesapla.mdogru.value;
+		var myanlis=document.ygshesapla.myanlis.value;
+		var mnet=mdogru-(myanlis/4);
+		document.ygssonuc.mnet.value=mnet;
+		
+		var sdogru=document.ygshesapla.sdogru.value;
+		var syanlis=document.ygshesapla.syanlis.value;
+		var snet=sdogru-(syanlis/4);
+		document.ygssonuc.snet.value=snet;
+		
+		var fdogru=document.ygshesapla.fdogru.value;
+		var fyanlis=document.ygshesapla.fyanlis.value;
+		var fnet=fdogru-(fyanlis/4);
+		document.ygssonuc.fnet.value=fnet;
+		
+		
+		ygs1=98.507+(tnet*1.905)+(snet*1.081)+(mnet*3.772)+(fnet*3.279);
+		document.ygssonuc.ygs1.value=ygs1;
+		ygs2=98.529+(tnet*1.877)+(snet*1.065)+(mnet*3.787)+(fnet*4.308);
+		document.ygssonuc.ygs2.value=ygs2;
+		ygs3=96.454+(tnet*3.831)+(snet*3.261)+(mnet*1.897)+(fnet*1.099);
+		document.ygssonuc.ygs3.value=ygs3;
+		ygs4=96.435+(tnet*2.837)+(snet*4.293)+(mnet*1.873)+(fnet*1.086);
+		document.ygssonuc.ygs5.value=ygs4;
+		ygs5=97.101+(tnet*3.597)+(snet*2.201)+(mnet*3.161)+(fnet*1.113);
+		document.ygssonuc.ygs5.value=ygs5;
+		ygs6=97.859+(tnet*3.184)+(snet*1.098)+(mnet*3.552)+(fnet*2.220);
+		document.ygssonuc.ygs6.value=ygs6;
+	}
+	
+	
+	
+	</script>
+</head>
+
+<body>
+	
+	<form name="ygshesapla">
+	
+	<table>
+		<tr>
+		<td></td>
+		<td>D</td>
+		<td>/</td>
+		<td>Y</td>
+		</tr>
+		
+		<tr>
+		<td>YGS Türkçe</td>
+			<td><input type="text" name="tdogru"></td>
+			<td>/</td>
+			<td><input type="text" name="tyanlis"></td>
+		</tr>
+		
+		<tr>
+		<td>YGS Sosyal Bilimler</td>
+			<td><input type="text" name="sdogru"></td>
+			<td>/</td>
+			<td><input type="text" name="syanlis"></td>
+		</tr>
+		
+		<tr>
+		<td>YGS Matematik</td>
+			<td><input type="text" name="mdogru"></td>
+			<td>/</td>
+			<td><input type="text" name="myanlis"></td>
+		</tr>
+		
+		<tr>
+		<td>YGS Fen Bilimleri</td>
+			<td><input type="text" name="fdogru"></td>
+			<td>/</td>
+			<td><input type="text" name="fyanlis"></td>
+		</tr>
+		
+		<tr>
+		<td colspan="1"><input type="reset" value="Temizle"></td>
+		<td colspan="3"><input type="button" value="Hesapla" onClick="hesapla()"></td>
+		</tr>
+		
+	</table>
+	</form>
+	
+	<form name="ygssonuc">
+	<table>
+	<tr>
+	<td>Türkçe Net </td>	
+	<td>Sosyal Bilimler Net</td>
+	<td>Matemetik Net</td>
+	<td>Fen Bilimleri Net</td>	
+	</tr>
+	</table>
+	<table>
+	<tr>
+	<td><input type="text" name="tnet" disabled="disabled"></td>	
+	<td><input type="text" name="snet" disabled="disabled"></td>
+	<td><input type="text" name="mnet" disabled="disabled"></td>
+	<td><input type="text" name="fnet" disabled="disabled"></td>
+	</tr>	
+	</table>
+	<table>
+	<tr>
+	<td>YGS-1</td>
+	<td><input type="text" disabled="disabled" name="ygs1"></td>	
+	</tr>
+	<tr>
+	<td>YGS-2</td>
+	<td><input type="text" disabled="disabled" name="ygs2"></td>	
+	</tr>
+	<tr>
+	<td>YGS-3</td>
+	<td><input type="text" disabled="disabled" name="ygs3"></td>	
+	</tr>
+	<tr>
+	<td>YGS-4</td>
+	<td><input type="text" disabled="disabled" name="ygs4"></td>	
+	</tr>
+	<tr>
+	<td>YGS-5</td>
+	<td><input type="text" disabled="disabled" name="ygs5"></td>	
+	</tr>
+	<tr>
+	<td>YGS-6</td>
+	<td><input type="text" disabled="disabled" name="ygs6"></td>	
+	</tr>
+	</table>
+	
+	</form>
+</body>
+</html>
